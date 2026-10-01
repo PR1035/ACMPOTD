@@ -5,7 +5,8 @@ We first find the sum to n nos. using the formula n*(n-1)/2 and then subract 2(1
 <img width="875" height="21" alt="image" src="https://github.com/user-attachments/assets/fb4b038f-3232-4de6-bc31-c2150b77d5fe" />
 
 ### CODE
-`#include <bits/stdc++.h>
+```
+#include <bits/stdc++.h>
 using namespace std;
 
 int main() {
@@ -30,5 +31,5 @@ int main() {
     }
       
 }
-`
+```
 
