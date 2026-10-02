@@ -77,3 +77,48 @@ int main() {
 }
 
 ```
+
+# AVERAGE NUMBERS
+### DESCRIPTION
+An element will satisfy the condition when the total sum of all elements(S) is divisible by n, basically a[i] = S/n
+
+### SCREENSHOT
+<img width="883" height="17" alt="image" src="https://github.com/user-attachments/assets/fb4b11fa-eae2-461e-98a0-5df8454f631f" />
+
+### CODE
+```
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    int n;
+    cin >> n;
+
+    vector<int> a(n);
+    long long sum = 0;
+
+    for (int &x : a) {
+        cin >> x;
+        sum += x;
+    }
+
+    vector<int> ans;
+
+    if (sum % n == 0) {
+        long long mean = sum / n;
+
+        for (int i = 0; i < n; ++i) {
+            if (a[i] == mean)
+                ans.push_back(i + 1);
+        }
+    }
+
+    cout << ans.size() << '\n';
+
+    for (int i : ans)
+        cout << i << ' ';
+    cout << endl;
+
+    return 0;
+}
+```
