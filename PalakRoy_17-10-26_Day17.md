@@ -23,3 +23,37 @@ int main() {
 
 }
 ```
+
+# YOUNG PHYSICIST
+### DESCRIPTION
+To check if equilibrium is present we add the x forces with each other and do the same with y and z
+
+### SCREENSHOT
+<img width="889" height="20" alt="image" src="https://github.com/user-attachments/assets/4b2a7c02-a8d1-4b36-a3cf-805efaf9341a" />
+
+### CODE
+```
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    int n;
+    cin >> n;
+
+    vector <int> x(n), y(n), z(n);
+    for (int i = 0; i < n; i++){
+        cin >> x[i] >> y[i] >> z[i];
+    }
+    int sumx = 0, sumy = 0, sumz = 0;
+    for (int i = 0; i < n; i++){
+        sumx += x[i];
+        sumy += y[i];
+        sumz += z[i];
+    }
+    if (sumx == 0 && sumy == 0 && sumz == 0){
+        cout << "YES";
+    }else{
+        cout << "NO";
+    }
+}
+```
