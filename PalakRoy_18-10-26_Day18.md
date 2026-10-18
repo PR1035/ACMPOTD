@@ -30,3 +30,47 @@ int main() {
 ```
 
 # Palindromic Times
+### DESCRIPTION
+We take input of the time in string and then convert it into int and remove the colons. Since it is in 24 hr format, we loop till 2400, then we skip those nos which are invalid that is end with nos > 60. And then we check if it's a palindrome or not.
+
+### SCREENSHOT
+<img width="870" height="17" alt="image" src="https://github.com/user-attachments/assets/e45a2647-9bd2-419e-9f52-44cd310c7e7f" />
+
+### CODE
+```
+
+#include <bits/stdc++.h>
+using namespace std;
+
+bool palindrome(string st) {
+    int n = st.size();
+    for (int i = 0; i < n / 2; i++) {
+        if (st[i] != st[n - i - 1]) {
+            return false;
+        }
+    }
+    return true;
+}
+
+int main() {
+    string time;
+    cin >> time;
+
+    time.erase(remove(time.begin(), time.end(), ':'), time.end());
+    int time24 = stoi(time) + 1;
+    for (int i = time24; i < 2400; i++) {
+        if (i % 100 >= 60) {
+            i = (i / 100 + 1) * 100 - 1;
+            continue;
+        }
+        string s = to_string(i);
+        s = string(4 - s.size(), '0') + s;
+        if (palindrome(s)) {
+            cout << s.substr(0, 2) << ":" << s.substr(2, 2);
+            return 0;
+        }
+    }
+
+    cout << "00:00";
+}
+```
