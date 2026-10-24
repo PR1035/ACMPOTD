@@ -33,4 +33,32 @@ int main() {
 
 }
 ```
+# CIEL AND DANCING
+### DESCRIPTION
+We first pair every guy with girl 1, so all of them dance for the first time and then we pair each girl (except girl 1) with boy 1 so all girls dance for the first time.
+
+### SCREENSHOT
+<img width="878" height="18" alt="image" src="https://github.com/user-attachments/assets/2de2fbdf-6fae-46f5-8851-717b42d2c986" />
+
+### CODE
+```
+#include <bits/stdc++.h>
+using namespace std;
+
+
+int main() {
+    int n, m;
+    cin >> n >> m;
+
+    cout << n + m -1 << endl;
+
+    for (int i = 1; i <= n; i++){
+        cout << i << " " << 1 << endl;
+    }
+    for (int j = 2; j <= m; j++){
+        cout << 1 << " " << j << endl;
+    }
+
+}
+```
 
